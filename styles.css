@@ -13,27 +13,31 @@ p{
 .grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
     "header header header header"
-     "main main main main"
     "main main main main"
-    "send-email send-email send-email send-email"
+    "main main main main"
+    "send-email send-email aside aside"
     "footer footer footer footer";
+    margin: 0;
+    width: 100vw;
 }
 .ponto{
     color: rgb(13, 255, 13);
 }
 
 .box-header{ 
-    width: 50%; 
-    
+    width: 50%;     
 }
-    header{
+
+
+ header{
     background-color: black;
     background-image: url( http://kcj65.cafe24.com/wp-content/uploads/2016/03/bkgp_biz_03_01.jpg);
     background-position: center;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     padding: 0 10% 0 10%;
     color:white;
@@ -47,18 +51,19 @@ p{
     flex-direction: column;
     width: 30%;
     align-items: center;
+    font-family: sans-serif;
 }
 .box-main h3{
     font-size: 25px;
     color: black;
-    font-family: sans-serif;
+    
 }
 .box-main p{
     font-size: 20px;
-    color: black;
+    color: grey;
 }
 
- main{
+main{
     display: flex;
     grid-area: main;
     margin: 0;
@@ -72,15 +77,21 @@ main div p {
 }
 
 .send-email{
+    background-color: lightgray;
+    font-family: sans-serif;
     grid-area: send-email;
+}
+.send-email input{
+    border-radius: 20px;
 }
 aside{
     grid-area: aside;
 }
+
 .icone1{
-      background-color: green;
-      border-radius: 50px;
-      padding: 10px;
+    background-color: green;
+    border-radius: 50px;
+    padding: 10px;
 }
 .icone2{
     background-color: green;
@@ -108,4 +119,13 @@ footer{
 
 .foto{
     background-image:url(http://kcj65.cafe24.com/wp-content/uploads/2016/03/bkgp_biz_03_01.jpg)
+}
+#icon-green{
+    background-color: green;
+}
+button{
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    
 }
