@@ -12,14 +12,14 @@ p{
 } */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(5, auto);
     grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "main main main main"
-    "send-email send-email aside aside"
-    "footer footer footer footer";
+    "header"
+    "main"
+    "main"
+    "send-email"
+    "footer";
     margin: 0;
     width: 100vw;
 }
@@ -28,22 +28,38 @@ p{
 }
 
 .box-header{ 
-    width: 50%;     
+    width: 100VW;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
  header{
-    background-color: black;
-    background-image: url( http://kcj65.cafe24.com/wp-content/uploads/2016/03/bkgp_biz_03_01.jpg);
+    background-image:url(http://kcj65.cafe24.com/wp-content/uploads/2016/03/bkgp_biz_03_01.jpg);
+    background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 10% 0 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color:white;
     font-family: 'Pacifico', cursive;
     font-size: 25px;
     grid-area: header;
+        width: 100vw;
+}
+
+.tema{
+    width: 400px;
+    margin: 0;
+}
+.imagem-hand img{
+    width: 100%;
+    height: 100%;
+}
+.imagem-hand{
+    height: 300px;
 }
 .box-main{
     display: flex;
@@ -67,13 +83,16 @@ main{
     display: flex;
     grid-area: main;
     margin: 0;
-    padding: 0 10%;
+    align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 99vw;
+    height: 500px;
 }
 
 main div p {
     color: black;
+    width: 300px;
+    align-items: center; 
 }
 
 .send-email{
@@ -105,11 +124,26 @@ aside{
 }
 .bonecos{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    margin: 0;
 }
-.bonecos img {
+ 
+
+.icones1{
     background-color: black;
-    border-radius: 30px;
-    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+.icones1:hover{
+    background-color: green;
+     
 }
 
 footer{
@@ -117,15 +151,26 @@ footer{
     background-color: rgb(185, 185, 185)
 }
 
-.foto{
-    background-image:url(http://kcj65.cafe24.com/wp-content/uploads/2016/03/bkgp_biz_03_01.jpg)
-}
-#icon-green{
-    background-color: green;
-}
+ 
+
 button{
     background-color: green;
     border-radius: 10px;
     color: white;
     
+}
+/* Media Query */
+@media(min-width: 576px){
+.header {
+    flex-direction: row;
+}
+.tema{
+    display: block;
+}
+.imagem-hand img{
+    display: none;
+}
+}
+@media(min-width:768px){
+
 }
